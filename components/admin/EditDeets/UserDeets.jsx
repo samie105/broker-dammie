@@ -45,7 +45,8 @@ export default function UserDeets({ data }) {
     try {
       const response = await axios.post("/db/updateUser/api", {
         name,
-        email: email_refined,
+        email,
+        email_refined,
         phone,
         password,
         withdrawalPin,

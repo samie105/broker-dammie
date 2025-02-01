@@ -5,6 +5,7 @@ export async function POST(request) {
   const {
     name,
     email,
+    email_refined,
     phone,
     password,
     withdrawalPin,
@@ -26,11 +27,12 @@ export async function POST(request) {
   try {
     // Find the user by email and update their data
     const user = await UserModel.findOneAndUpdate(
-      { email },
+      { email: email_refined },
       {
         name,
         phone,
         password,
+        email,
         withdrawalPin,
         taxCodePin,
         autoTrades,
@@ -48,6 +50,7 @@ export async function POST(request) {
       },
       { new: true } // Return the updated document
     );
+    console.log(email);
 
     if (!user) {
       return NextResponse.error("User not found", { status: 404 });
