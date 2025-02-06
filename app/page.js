@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <>
       <Script
-        src="code.tidio.co/lbaoat4dzizpmilf263rjuksqrd5g6wg.js"
+        src="//code.tidio.co/lbaoat4dzizpmilf263rjuksqrd5g6wg.js"
         strategy="afterInteractive"
         async
       ></Script>
