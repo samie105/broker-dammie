@@ -138,7 +138,7 @@ export const UserDataProvider = ({ children }) => {
     const fetchAddress = async () => {
       try {
         const response = await axios.post("/db/getAddess/", {
-          _id: "66c12ec12e22020e6f7b8c5b",
+          : "6865cf87309c2de538f642de",
         });
         setAddress(response.data);
       } catch (error) {
@@ -146,7 +146,7 @@ export const UserDataProvider = ({ children }) => {
       }
     };
     fetchAddress();
-  }, [details._id]);
+  }, [details.]);
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.localStorage.setItem("defaultOpen", defaultOpen.toString());
