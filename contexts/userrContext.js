@@ -146,7 +146,7 @@ export const UserDataProvider = ({ children }) => {
       }
     };
     fetchAddress();
-  }, [details.]);
+  }, [details]);
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.localStorage.setItem("defaultOpen", defaultOpen.toString());
